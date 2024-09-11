@@ -6,7 +6,7 @@
 <div class="app">
 	<div class="sidebar">
 		<ul class="sidenav-list">
-			<SidenavItem id="homeButton" text="home" href="/"></SidenavItem>
+			<SidenavItem id="homeButton" text="home" href="/portfolio"></SidenavItem>
 			<SidenavItem id="aboutButton" text="about" href="/portfolio/about"></SidenavItem>
 			<SidenavItem id="projectsButton" text="projects" href="/portfolio/projects"></SidenavItem>
 		</ul>
