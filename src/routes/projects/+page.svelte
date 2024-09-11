@@ -1,5 +1,5 @@
 <script>
-
+  import Table from "../../components/Table.svelte";
 </script>
 
 <svelte:head>
@@ -9,29 +9,7 @@
 
 <main>
     <h1>Projects</h1>
-    <table>
-        <tbody>
-            <tr>
-                <td>First Project</td>
-                <td><a href="https://google.com">Link to</a></td>
-                <td>2024.09.11</td>
-            </tr>
-            <tr>
-                <td>First Project</td>
-                <td><a href="https://google.com">Link to</a></td>
-                <td>2024.09.11</td>
-            </tr>
-        </tbody>
-    </table>
+    <Table></Table>
 </main>
 
-<style>
-    table {
-        width: 100%;
-        text-align: left;
-    }
-
-    td {
-        padding-bottom: 5px;
-    }
-</style>
+<style></style>
