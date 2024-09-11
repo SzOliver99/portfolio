@@ -33,7 +33,7 @@
 	.sidebar {
 		width: 150px;
 		padding: 10px;
-	/* } */
+	}
 
 	.sidenav-list {
 		display: flex;
