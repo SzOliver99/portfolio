@@ -30,12 +30,31 @@ function get_current_component() {
   if (!current_component) throw new Error("Function called outside component initialization");
   return current_component;
 }
+function onDestroy(fn) {
+  get_current_component().$$.on_destroy.push(fn);
+}
 function setContext(key, context) {
   get_current_component().$$.context.set(key, context);
   return context;
 }
 function getContext(key) {
   return get_current_component().$$.context.get(key);
+}
+const ATTR_REGEX = /[&"<]/g;
+const CONTENT_REGEX = /[&<]/g;
+function escape(value, is_attr = false) {
+  const str = String(value);
+  const pattern = is_attr ? ATTR_REGEX : CONTENT_REGEX;
+  pattern.lastIndex = 0;
+  let escaped = "";
+  let last = 0;
+  while (pattern.test(str)) {
+    const i = pattern.lastIndex - 1;
+    const ch = str[i];
+    escaped += str.substring(last, i) + (ch === "&" ? "&amp;" : ch === '"' ? "&quot;" : "&lt;");
+    last = i + 1;
+  }
+  return escaped + str.substring(last);
 }
 const missing_component = {
   $$render: () => ""
@@ -86,13 +105,21 @@ function create_ssr_component(fn) {
     $$render
   };
 }
+function add_attribute(name, value, boolean) {
+  if (value == null || boolean) return "";
+  const assignment = `="${escape(value, true)}"`;
+  return ` ${name}${assignment}`;
+}
 export {
-  setContext as a,
-  subscribe as b,
+  add_attribute as a,
+  safe_not_equal as b,
   create_ssr_component as c,
+  subscribe as d,
+  escape as e,
   getContext as g,
   missing_component as m,
   noop as n,
-  safe_not_equal as s,
+  onDestroy as o,
+  setContext as s,
   validate_component as v
 };

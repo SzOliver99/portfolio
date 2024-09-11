@@ -12,6 +12,13 @@
     "file": "chunks/exports.js",
     "name": "exports"
   },
+  "_index.js": {
+    "file": "chunks/index.js",
+    "name": "index",
+    "imports": [
+      "_ssr.js"
+    ]
+  },
   "_internal.js": {
     "file": "chunks/internal.js",
     "name": "internal",
@@ -22,54 +29,6 @@
   "_ssr.js": {
     "file": "chunks/ssr.js",
     "name": "ssr"
-  },
-  "node_modules/@fontsource/fira-mono/files/fira-mono-cyrillic-400-normal.woff": {
-    "file": "_app/immutable/assets/fira-mono-cyrillic-400-normal.Dq7SlH2J.woff",
-    "src": "node_modules/@fontsource/fira-mono/files/fira-mono-cyrillic-400-normal.woff"
-  },
-  "node_modules/@fontsource/fira-mono/files/fira-mono-cyrillic-400-normal.woff2": {
-    "file": "_app/immutable/assets/fira-mono-cyrillic-400-normal.36-45Uyg.woff2",
-    "src": "node_modules/@fontsource/fira-mono/files/fira-mono-cyrillic-400-normal.woff2"
-  },
-  "node_modules/@fontsource/fira-mono/files/fira-mono-cyrillic-ext-400-normal.woff": {
-    "file": "_app/immutable/assets/fira-mono-cyrillic-ext-400-normal.0xXfcOOq.woff",
-    "src": "node_modules/@fontsource/fira-mono/files/fira-mono-cyrillic-ext-400-normal.woff"
-  },
-  "node_modules/@fontsource/fira-mono/files/fira-mono-cyrillic-ext-400-normal.woff2": {
-    "file": "_app/immutable/assets/fira-mono-cyrillic-ext-400-normal.B04YIrm4.woff2",
-    "src": "node_modules/@fontsource/fira-mono/files/fira-mono-cyrillic-ext-400-normal.woff2"
-  },
-  "node_modules/@fontsource/fira-mono/files/fira-mono-greek-400-normal.woff": {
-    "file": "_app/immutable/assets/fira-mono-greek-400-normal.DUeQbRz0.woff",
-    "src": "node_modules/@fontsource/fira-mono/files/fira-mono-greek-400-normal.woff"
-  },
-  "node_modules/@fontsource/fira-mono/files/fira-mono-greek-400-normal.woff2": {
-    "file": "_app/immutable/assets/fira-mono-greek-400-normal.C3zng6O6.woff2",
-    "src": "node_modules/@fontsource/fira-mono/files/fira-mono-greek-400-normal.woff2"
-  },
-  "node_modules/@fontsource/fira-mono/files/fira-mono-greek-ext-400-normal.woff": {
-    "file": "_app/immutable/assets/fira-mono-greek-ext-400-normal.BEhC8Nsh.woff",
-    "src": "node_modules/@fontsource/fira-mono/files/fira-mono-greek-ext-400-normal.woff"
-  },
-  "node_modules/@fontsource/fira-mono/files/fira-mono-greek-ext-400-normal.woff2": {
-    "file": "_app/immutable/assets/fira-mono-greek-ext-400-normal.CsqI23CO.woff2",
-    "src": "node_modules/@fontsource/fira-mono/files/fira-mono-greek-ext-400-normal.woff2"
-  },
-  "node_modules/@fontsource/fira-mono/files/fira-mono-latin-400-normal.woff": {
-    "file": "_app/immutable/assets/fira-mono-latin-400-normal.g4W12wf9.woff",
-    "src": "node_modules/@fontsource/fira-mono/files/fira-mono-latin-400-normal.woff"
-  },
-  "node_modules/@fontsource/fira-mono/files/fira-mono-latin-400-normal.woff2": {
-    "file": "_app/immutable/assets/fira-mono-latin-400-normal.DKjLVgQi.woff2",
-    "src": "node_modules/@fontsource/fira-mono/files/fira-mono-latin-400-normal.woff2"
-  },
-  "node_modules/@fontsource/fira-mono/files/fira-mono-latin-ext-400-normal.woff": {
-    "file": "_app/immutable/assets/fira-mono-latin-ext-400-normal.lWlD_NAB.woff",
-    "src": "node_modules/@fontsource/fira-mono/files/fira-mono-latin-ext-400-normal.woff"
-  },
-  "node_modules/@fontsource/fira-mono/files/fira-mono-latin-ext-400-normal.woff2": {
-    "file": "_app/immutable/assets/fira-mono-latin-ext-400-normal.D6XfiR-_.woff2",
-    "src": "node_modules/@fontsource/fira-mono/files/fira-mono-latin-ext-400-normal.woff2"
   },
   "node_modules/@sveltejs/kit/src/runtime/components/error.svelte": {
     "file": "entries/fallbacks/error.svelte.js",
@@ -89,7 +48,7 @@
     "imports": [
       "_internal.js",
       "_exports.js",
-      "_ssr.js"
+      "_index.js"
     ]
   },
   "src/routes/+layout.svelte": {
@@ -98,24 +57,11 @@
     "src": "src/routes/+layout.svelte",
     "isEntry": true,
     "imports": [
-      "_ssr.js"
+      "_ssr.js",
+      "_index.js"
     ],
     "css": [
-      "_app/immutable/assets/_layout.CBSVONns.css"
-    ],
-    "assets": [
-      "_app/immutable/assets/fira-mono-cyrillic-ext-400-normal.B04YIrm4.woff2",
-      "_app/immutable/assets/fira-mono-cyrillic-ext-400-normal.0xXfcOOq.woff",
-      "_app/immutable/assets/fira-mono-cyrillic-400-normal.36-45Uyg.woff2",
-      "_app/immutable/assets/fira-mono-cyrillic-400-normal.Dq7SlH2J.woff",
-      "_app/immutable/assets/fira-mono-greek-ext-400-normal.CsqI23CO.woff2",
-      "_app/immutable/assets/fira-mono-greek-ext-400-normal.BEhC8Nsh.woff",
-      "_app/immutable/assets/fira-mono-greek-400-normal.C3zng6O6.woff2",
-      "_app/immutable/assets/fira-mono-greek-400-normal.DUeQbRz0.woff",
-      "_app/immutable/assets/fira-mono-latin-ext-400-normal.D6XfiR-_.woff2",
-      "_app/immutable/assets/fira-mono-latin-ext-400-normal.lWlD_NAB.woff",
-      "_app/immutable/assets/fira-mono-latin-400-normal.DKjLVgQi.woff2",
-      "_app/immutable/assets/fira-mono-latin-400-normal.g4W12wf9.woff"
+      "_app/immutable/assets/_layout.CFp7A3gu.css"
     ]
   },
   "src/routes/+page.svelte": {
@@ -127,7 +73,7 @@
       "_ssr.js"
     ],
     "css": [
-      "_app/immutable/assets/_page.DzG1tEHA.css"
+      "_app/immutable/assets/_page.BLnEVPQz.css"
     ]
   },
   "src/routes/+page.ts": {
@@ -135,5 +81,26 @@
     "name": "entries/pages/_page.ts",
     "src": "src/routes/+page.ts",
     "isEntry": true
+  },
+  "src/routes/about/+page.svelte": {
+    "file": "entries/pages/about/_page.svelte.js",
+    "name": "entries/pages/about/_page.svelte",
+    "src": "src/routes/about/+page.svelte",
+    "isEntry": true,
+    "imports": [
+      "_ssr.js"
+    ]
+  },
+  "src/routes/projects/+page.svelte": {
+    "file": "entries/pages/projects/_page.svelte.js",
+    "name": "entries/pages/projects/_page.svelte",
+    "src": "src/routes/projects/+page.svelte",
+    "isEntry": true,
+    "imports": [
+      "_ssr.js"
+    ],
+    "css": [
+      "_app/immutable/assets/_page.C_1Kso7W.css"
+    ]
   }
 }
