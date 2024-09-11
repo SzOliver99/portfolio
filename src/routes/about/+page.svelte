@@ -7,7 +7,7 @@
 
 <main>
 	<h1>About me</h1>
-	<p>Hi, my name is Oliver Szvetnyik and 19 years old. I'm currently learning to be a Software Engineer. My goal to learn Rust to be my main language</p>
+	<p>Hi, my name is Oliver Szvetnyik and I'm 19 years old. I'm currently learning to be a Software Engineer. My goal to learn Rust is to be my main language.</p>
 </main>
 
 <style></style>
