@@ -15,20 +15,20 @@
 			<MainLogo />
 		</div>
 		<ul class="sidenav-list">
-			<Slider {activeIndex}></Slider>
+			<!-- <Slider {activeIndex}></Slider> -->
 
 			<SidenavItem className="home" text="home" href="/portfolio"></SidenavItem>
 			<SidenavItem className="about" text="about" href="/portfolio/about"></SidenavItem>
 			<SidenavItem className="projects" text="projects" href="/portfolio/projects"></SidenavItem>
 		</ul>
-		{#if activeIndex < 2}
+		<!-- {#if activeIndex < 2}
 			<button on:click={() => activeIndex++}>+</button>
 		{/if}
 		{#if activeIndex > 0}
 			<button on:click={() => activeIndex--}>-</button>
 		{/if}
 		<button on:click={() => activeIndex = 0}>0</button>
-		<button on:click={() => activeIndex = 2}>2</button>
+		<button on:click={() => activeIndex = 2}>2</button> -->
 	</div>
 	<section class="content">
 		<slot />
