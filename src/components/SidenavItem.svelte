@@ -1,18 +1,23 @@
 <script lang="ts">
-  import { activeButton } from "../store";
+  import { activeButton, activeButtonIndex } from "../store";
   import { onDestroy } from 'svelte';
 
-  export let id: string;
+  export let className: string;
   export let text: string;
   export let href: string;
   let isActive: boolean = false;
 
+  let list = ["home", "about", "projects"]
+
+
   const unsubscribe = activeButton.subscribe(value => {
-    isActive = value === id;
+    isActive = value === className;
   });
 
   function toggleActive() {
-    activeButton.set(id);
+    activeButton.set(className);
+    activeButtonIndex.set(list.indexOf(className));
+
   }
 
   onDestroy(() => {
@@ -20,13 +25,17 @@
   });
 </script>
 
-<li class="sidenav-item">
-  <a class="sidenav-link" class:active = {isActive} on:click={toggleActive} href={href} rel="prefetch">{text}</a>
+<li id="home" class="sidenav-item">
+  {#if isActive}
+    <a class="sidenav-link" class:active={isActive} on:click={toggleActive} href={href} rel="prefetch">{text}</a>
+  {:else}
+    <a class="sidenav-link" class:active={isActive} on:click={toggleActive} href={href} rel="prefetch">{text}</a>
+  {/if}
 </li>
 
 
 <style>
-  .sidenav-item a {
+  a {
 		background-color: transparent;
 		color: #7a7c85;
 		font-weight: 400;
@@ -34,14 +43,14 @@
 		padding: 10px 12px;
 	}
 
-	.sidenav-item a:hover, .sidenav-link.active {
+	a:hover, .sidenav-link.active {
     color: #fff;
 	}
 
   .sidenav-link.active {
     background-color: #202327;
     border-radius: 5px;
-    transition: color 0.3s ease;
+    transition: all 0.3s ease;
     box-shadow: 4px 4px 3px 0 rgba(0, 0, 0, .1);
   }
 </style>

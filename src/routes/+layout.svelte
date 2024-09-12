@@ -1,20 +1,34 @@
 <script lang="ts">
 	import '../app.css';
+	import MainLogo from '../components/MainLogo.svelte';
 	import SidenavItem from '../components/SidenavItem.svelte';
-	import rust_logo from '../lib/images/rust-logo.png';
+  	import Slider from '../components/Slider.svelte';
+  	import { activeButtonIndex } from '../store';
+
+	let activeIndex: number;
+	$: activeIndex = $activeButtonIndex;
 </script>
 
 <div class="app">
 	<div class="sidebar">
+		<div class="img">
+			<MainLogo />
+		</div>
 		<ul class="sidenav-list">
-			<picture>
-				<source srcset={rust_logo} type="image/png" />
-                <img src={rust_logo} alt="Logo" />
-			</picture>
-			<SidenavItem id="homeButton" text="home" href="/portfolio"></SidenavItem>
-			<SidenavItem id="aboutButton" text="about" href="/portfolio/about"></SidenavItem>
-			<SidenavItem id="projectsButton" text="projects" href="/portfolio/projects"></SidenavItem>
+			<Slider {activeIndex}></Slider>
+
+			<SidenavItem className="home" text="home" href="/portfolio"></SidenavItem>
+			<SidenavItem className="about" text="about" href="/portfolio/about"></SidenavItem>
+			<SidenavItem className="projects" text="projects" href="/portfolio/projects"></SidenavItem>
 		</ul>
+		{#if activeIndex < 2}
+			<button on:click={() => activeIndex++}>+</button>
+		{/if}
+		{#if activeIndex > 0}
+			<button on:click={() => activeIndex--}>-</button>
+		{/if}
+		<button on:click={() => activeIndex = 0}>0</button>
+		<button on:click={() => activeIndex = 2}>2</button>
 	</div>
 	<section class="content">
 		<slot />
@@ -33,6 +47,12 @@
 	.sidebar {
 		width: 150px;
 		padding: 10px;
+		text-align: right;
+	}
+
+	.img {
+		width: 100%;
+		height: 80px;
 	}
 
 	.sidenav-list {
@@ -40,7 +60,8 @@
 		flex-direction: column;
 		gap: 20px;
 		list-style-type: none;
-		text-align: right;
+		position: sticky;
+		top: 200px;
 	}
 
 	.content {
