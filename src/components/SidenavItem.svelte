@@ -25,7 +25,7 @@
   });
 </script>
 
-<li id="home" class="sidenav-item">
+<li id="sidenav-item" class="mb-0">
   {#if isActive}
     <a class="sidenav-link" class:active={isActive} on:click={toggleActive} href={href} rel="prefetch">{text}</a>
   {:else}
@@ -36,21 +36,18 @@
 
 <style>
   a {
-		background-color: transparent;
-		color: #7a7c85;
-		font-weight: 400;
+    @apply bg-transparent text-[#7a7c85] font-normal;
 		font-size: 17px;
 		padding: 10px 12px;
 	}
 
 	a:hover, .sidenav-link.active {
-    color: #fff;
+    @apply text-white
 	}
 
   .sidenav-link.active {
-    background-color: #202327;
-    border-radius: 5px;
-    transition: all 0.3s ease;
+    @apply bg-[#202327] rounded;
+    /* transition: all 0.3s ease; */
     box-shadow: 4px 4px 3px 0 rgba(0, 0, 0, .1);
   }
 </style>

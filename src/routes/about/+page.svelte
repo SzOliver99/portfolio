@@ -1,4 +1,5 @@
-<script></script>
+<script>
+</script>
 
 <svelte:head>
 	<title>About | Oliver Szvetnyik</title>
@@ -10,4 +11,5 @@
 	<p>Hi, my name is Oliver Szvetnyik and I'm 19 years old. I'm currently learning to be a Software Engineer. My goal is to learn Rust to be my main language.</p>
 </main>
 
-<style></style>
+<style>
+</style>

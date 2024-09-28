@@ -1,20 +1,20 @@
-<script lang="ts">
+<script>
 	import '../app.css';
 	import MainLogo from '../components/MainLogo.svelte';
 	import SidenavItem from '../components/SidenavItem.svelte';
-  	import Slider from '../components/Slider.svelte';
+  	// import Slider from '../components/Slider.svelte';
   	import { activeButtonIndex } from '../store';
 
-	let activeIndex: number;
+	let activeIndex;
 	$: activeIndex = $activeButtonIndex;
 </script>
 
-<div class="app">
-	<div class="sidebar">
-		<div class="img">
+<div class="flex flex-grow mt-[130px] gap-5 justify-center">
+	<div class="w-[150px] p-[10px] text-right">
+		<div class="w-full h-[80px]">
 			<MainLogo />
 		</div>
-		<ul class="sidenav-list">
+		<ul class="flex flex-col gap-5 list-none">
 			<!-- <Slider {activeIndex}></Slider> -->
 
 			<SidenavItem className="home" text="home" href="/portfolio"></SidenavItem>
@@ -30,42 +30,10 @@
 		<button on:click={() => activeIndex = 0}>0</button>
 		<button on:click={() => activeIndex = 2}>2</button> -->
 	</div>
-	<section class="content">
+	<section class="min-w-[640px] max-w-[640px]">
 		<slot />
 	</section>
 </div>
 
 <style>
-	.app {
-		flex-grow: 1;
-		display: flex;
-		gap: 20px;
-		justify-content: center;
-		margin: 130px auto auto;
-	}
-
-	.sidebar {
-		width: 150px;
-		padding: 10px;
-		text-align: right;
-	}
-
-	.img {
-		width: 100%;
-		height: 80px;
-	}
-
-	.sidenav-list {
-		display: flex;
-		flex-direction: column;
-		gap: 20px;
-		list-style-type: none;
-		position: sticky;
-		top: 200px;
-	}
-
-	.content {
-		min-width: 640px;
-		max-width: 640px;
-	}
 </style>

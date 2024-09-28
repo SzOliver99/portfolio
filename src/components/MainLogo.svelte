@@ -1,5 +1,5 @@
 <script>
-    import src from '../lib/images/rust-logo.png';
+    import src from '$lib/images/rust-logo.png';
 </script>
 
 <picture>

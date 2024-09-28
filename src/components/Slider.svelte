@@ -14,6 +14,7 @@
         height: 40px;
         width: 100%;
         opacity: 0.3;
+        background-color: #fff;
         box-shadow: 4px 4px 3px 0 rgba(0, 0, 0, .1);
         z-index: -1;
     }
