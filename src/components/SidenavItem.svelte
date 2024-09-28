@@ -42,7 +42,7 @@
 	}
 
 	a:hover, .sidenav-link.active {
-    @apply text-white
+    @apply text-[#fdbf35]
 	}
 
   .sidenav-link.active {
