@@ -2,11 +2,11 @@
 	import '../app.css';
 	import MainLogo from '../components/MainLogo.svelte';
 	import SidenavItem from '../components/SidenavItem.svelte';
-  	// import Slider from '../components/Slider.svelte';
-  	import { activeButtonIndex } from '../store';
+	// import Slider from '../components/Slider.svelte';
+	import { lastActiveButtonIndex } from '../store';
 
 	let activeIndex;
-	$: activeIndex = $activeButtonIndex;
+	$: activeIndex = $lastActiveButtonIndex;
 </script>
 
 <div class="flex flex-grow mt-[130px] gap-5 justify-center">

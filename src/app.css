@@ -1,44 +1,37 @@
-@import url("https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,100..900;1,100..900&display=swap");
+@import url('https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,100..900;1,100..900&display=swap');
 
 /* @tailwind base; */
 @tailwind components;
 @tailwind utilities;
 
-:root {
-    font-family: "Montserrat", sans-serif;
-    color: #f3f6f9;
-}
-
 body {
-    min-height: 100%;
-    margin: 0;
-    background-attachment: fixed;
-    background-size: 100vw 100vh;
-    background-color: rgb(14, 15, 16);
+	min-height: 100%;
+	margin: 0;
+	@apply bg-primary-500 text-gray-100 font-sans;
 }
 
 p {
-    font-weight: 400;
-    line-height: 24px !important;
-    max-width: 440px;
+	font-weight: 400;
+	line-height: 24px !important;
+	max-width: 440px;
+	margin: 0;
 }
 
 h1 {
-    @apply font-bold;
+	@apply font-bold;
 }
 
 h1,
 p {
-  text-align: left;
+	text-align: left;
 }
 
 a {
-  color: #fdbf35;
-  text-decoration: none;
+	text-decoration: none;
 }
 
 h1 {
-    font-size: 29px;
-    margin-top: 0;
-    margin-bottom: 10px;
+	font-size: 29px;
+	margin-top: 0;
+	margin-bottom: 10px;
 }
