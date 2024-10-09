@@ -8,8 +8,8 @@
         created_at: "2024.09.28"
     },
     {
-        project_name: "First Project",
-        link_url: "https://google.com",
+        project_name: "Saveable buttons",
+        link_url: "https://szoliver99.github.io/sob02/",
         created_at: "2024.09.11"
     },
     {
