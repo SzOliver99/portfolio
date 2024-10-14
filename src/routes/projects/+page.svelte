@@ -13,8 +13,8 @@
         created_at: "2024.09.11"
     },
     {
-        project_name: "First Project",
-        link_url: "https://google.com",
+        project_name: "Sticky Notes",
+        link_url: "https://szoliver99.github.io/sticky_notes/",
         created_at: "2024.09.11"
     },
   ]
