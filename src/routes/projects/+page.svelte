@@ -4,7 +4,7 @@
   const Projects = [
     {
         project_name: "Website for Libary project with svelte",
-        link_url: "https://szoliver99.github.io/libri_project/",
+        link_url: "https://libri-project.vercel.app",
         created_at: "2024.09.28"
     },
     {
