@@ -17,6 +17,11 @@
         link_url: "https://szoliver99.github.io/sticky_notes/",
         created_at: "2024.09.11"
     },
+{
+        project_name: "Billiard",
+        link_url: "https://szoliver99.github.io/billiard/",
+        created_at: "2024.12.04"
+    },
   ]
 </script>
 
