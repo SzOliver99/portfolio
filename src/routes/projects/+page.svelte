@@ -22,6 +22,11 @@
         link_url: "https://szoliver99.github.io/billiard/",
         created_at: "2024.12.04"
     },
+{
+        project_name: "Zene lejátszó",
+        link_url: "https://github.com/HUNaGyerek/music_player",
+        created_at: "2025.01.08"
+    },
   ]
 </script>
 
